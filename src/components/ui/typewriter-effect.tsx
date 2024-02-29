@@ -1,13 +1,14 @@
 "use client";
 
 import {cn} from "@/lib/utils";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+import {motion, stagger, useAnimate, useInView} from "framer-motion";
+import {useEffect} from "react";
 
 export const TypewriterEffect = ({
                                      words,
                                      className,
                                      cursorClassName,
+                                     onCompleted,
                                  }: {
     words: {
         text: string;
@@ -15,6 +16,7 @@ export const TypewriterEffect = ({
     }[];
     className?: string;
     cursorClassName?: string;
+    onCompleted?: () => void;
 }) => {
     // split text inside of words into array of characters
     const wordsArray = words.map((word) => {
@@ -38,6 +40,7 @@ export const TypewriterEffect = ({
                     duration: 0.3,
                     delay: stagger(0.1),
                     ease: "easeInOut",
+                    onComplete: onCompleted,
                 }
             );
         }
