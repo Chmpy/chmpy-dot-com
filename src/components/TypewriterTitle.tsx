@@ -26,10 +26,10 @@ export default function TypewriterTitle() {
                 {isCompleted && (
                     <>
                         <motion.div
-                            initial={{x: -300, opacity: 0}} // Start from the left side
+                            initial={{x: -150, opacity: 0}} // Start from the left side
                             animate={{x: 0, opacity: 1}} // Move to the original position
                             exit={{x: 300, opacity: 0}} // Exit to the right side
-                            transition={{duration: 1, type: "spring", stiffness: 50}} // Define the transition
+                            transition={{duration: 1, type: "spring", stiffness: 25, delay:0.4}} // Define the transition
                         >
                             Software Engineer
                         </motion.div>
