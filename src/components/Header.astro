@@ -1,7 +1,6 @@
 ---
 import ModeToggle from "./ModeToggle";
-import {TerminalButton} from "./TerminalButton";
-import {TerminalDrawer} from "./TerminalDrawer";
+import TerminalButton from "./TerminalButton";
 ---
 
 <script is:inline>
@@ -26,5 +25,8 @@ import {TerminalDrawer} from "./TerminalDrawer";
 <header>
     <div class="absolute top-0 right-0 p-8">
         <ModeToggle client:load/>
+    </div>
+    <div class="absolute top-0 left-0 p-8">
+        <TerminalButton client:load/>
     </div>
 </header>

@@ -24,3 +24,7 @@ pnpm-debug.log*
 .idea/
 .vscode/
 
+#  build output
+dist/
+.vercel
+

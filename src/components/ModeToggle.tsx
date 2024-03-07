@@ -25,7 +25,7 @@ export default function ModeToggle() {
     return (
         <ThemeSwitch
             checked={checked}
-            onCheckedChange={checked => {
+            onCheckedChange={(checked: boolean | ((prevState: boolean) => boolean)) => {
                 setChecked(checked);
                 setThemeState(checked ? "dark" : "theme-light");
             }}

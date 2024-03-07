@@ -1,4 +1,3 @@
-import * as React from "react"
 import {Moon, Sun} from "lucide-react"
 import {useSpring, animated} from 'react-spring'
 
