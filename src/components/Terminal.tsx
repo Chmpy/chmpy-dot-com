@@ -48,7 +48,7 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                         <p>Enter 'ls' to see available pages or 'cd &lt;page&gt; ' to navigate.</p>
                     </div>
                     <div className="mb-4">
-                        <pre>{output}</pre>
+                        <pre className="text-wrap">{output}</pre>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="flex">
