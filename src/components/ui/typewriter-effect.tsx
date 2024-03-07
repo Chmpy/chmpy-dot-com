@@ -1,13 +1,14 @@
 "use client";
 
 import {cn} from "@/lib/utils";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+import {motion, stagger, useAnimate, useInView} from "framer-motion";
+import {useEffect} from "react";
 
 export const TypewriterEffect = ({
                                      words,
                                      className,
                                      cursorClassName,
+                                     onCompleted,
                                  }: {
     words: {
         text: string;
@@ -15,6 +16,7 @@ export const TypewriterEffect = ({
     }[];
     className?: string;
     cursorClassName?: string;
+    onCompleted?: () => void;
 }) => {
     // split text inside of words into array of characters
     const wordsArray = words.map((word) => {
@@ -38,6 +40,7 @@ export const TypewriterEffect = ({
                     duration: 0.3,
                     delay: stagger(0.1),
                     ease: "easeInOut",
+                    onComplete: onCompleted,
                 }
             );
         }
@@ -71,7 +74,7 @@ export const TypewriterEffect = ({
     return (
         <div
             className={cn(
-                "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center",
+                "text-3xl  md:text-4xl lg:text-5xl font-bold text-center",
                 className
             )}
         >
@@ -89,7 +92,7 @@ export const TypewriterEffect = ({
                     repeatType: "reverse",
                 }}
                 className={cn(
-                    "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-black dark:bg-white",
+                    "inline-block rounded-sm w-[4px] h-6 md:h-8 lg:h-10 bg-black dark:bg-white",
                     cursorClassName
                 )}
             ></motion.span>

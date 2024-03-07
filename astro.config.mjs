@@ -14,5 +14,9 @@ export default defineConfig({
     }),
     integrations: [tailwind({
         applyBaseStyles: false,
-    }), , react()]
+    }), , react()],
+    redirects:
+        {
+            'home': '/',
+        },
 });
