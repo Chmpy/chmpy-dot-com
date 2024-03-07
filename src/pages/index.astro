@@ -1,74 +1,10 @@
 ---
-import '@/styles/globals.css'
-import '@fontsource-variable/exo-2';
-import ModeToggle from "@/components/ModeToggle";
 import Hero from "@/components/Hero";
+import Layout from "../layouts/Layout.astro";
 ---
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>Chmpy</title>
-</head>
+<Layout>
+        <Hero client:visible/>
+</Layout>
 
-<script is:inline>
-    const getThemePreference = () => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-            return localStorage.getItem('theme');
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    };
-    const isDark = getThemePreference() === 'dark';
-    document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
-
-    if (typeof localStorage !== 'undefined') {
-        const observer = new MutationObserver(() => {
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-        observer.observe(document.documentElement, {attributes: true, attributeFilter: ['class']});
-    }
-</script>
-<body>
-<header>
-    <div class="absolute top-0 right-0 p-8">
-        <ModeToggle client:load/>
-    </div>
-</header>
-<main class="container">
-    <Hero client:visible>
-</main>
-<footer>
-    <p class="text-center">© 2024 Chmpy</p>
-</footer>
-</body>
-</html>
-
-<style is:global>
-    :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-                45deg,
-                rgb(var(--accent)),
-                rgb(var(--accent-light)) 30%,
-                white 60%
-        );
-    }
-
-    body {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        font-family: 'Exo 2 Variable', sans-serif;
-    }
-</style>
 
 

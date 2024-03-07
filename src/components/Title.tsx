@@ -3,7 +3,7 @@ import {TypewriterEffect} from "@/components/ui/typewriter-effect";
 import {motion, AnimatePresence} from "framer-motion";
 import React from "react";
 
-export default function TypewriterTitle() {
+export default function Title() {
     const words = [
         {
             text: "Roy",
@@ -20,7 +20,7 @@ export default function TypewriterTitle() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-[10rem] ">
+        <>
             <TypewriterEffect words={words} onCompleted={handleComplete}/>
             <AnimatePresence>
                 {isCompleted && (
@@ -29,13 +29,18 @@ export default function TypewriterTitle() {
                             initial={{x: -150, opacity: 0}} // Start from the left side
                             animate={{x: 0, opacity: 1}} // Move to the original position
                             exit={{x: 300, opacity: 0}} // Exit to the right side
-                            transition={{duration: 1, type: "spring", stiffness: 25, delay:0.4}} // Define the transition
+                            transition={{
+                                duration: 1,
+                                type: "spring",
+                                stiffness: 25,
+                                delay: 0.4
+                            }} // Define the transition
                         >
                             Software Engineer
                         </motion.div>
                     </>
                 )}
             </AnimatePresence>
-        </div>
+        </>
     );
 }

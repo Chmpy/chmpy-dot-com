@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Switch} from "@/components/ui/switch.tsx";
+import {ThemeSwitch} from "@/components/ui/theme-switch.tsx";
 
 export default function ModeToggle() {
     const [theme, setThemeState] = React.useState<
@@ -23,13 +23,13 @@ export default function ModeToggle() {
     }, [theme])
 
     return (
-        <Switch
+        <ThemeSwitch
             checked={checked}
             onCheckedChange={checked => {
                 setChecked(checked);
                 setThemeState(checked ? "dark" : "theme-light");
             }}
         >
-        </Switch>
+        </ThemeSwitch>
     )
 }
