@@ -1,4 +1,4 @@
-import Title from "@/components/Title.tsx";
+import Title from "@/components/hero/Title.tsx";
 
 export default function Hero() {
     return (

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Terminal as TerminalIcon} from "lucide-react";
-import Terminal from "./Terminal";
+import Terminal from "./Terminal.tsx";
 
 export default function TerminalButton() {
     const [isTerminalOpen, setIsTerminalOpen] = useState(false);

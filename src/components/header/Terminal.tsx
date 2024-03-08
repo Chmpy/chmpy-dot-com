@@ -10,7 +10,7 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
     const [command, setCommand] = useState("");
     const [output, setOutput] = useState("");
 
-    const pages = ["home", "about", "projects", "contact"];
+    const pages = ["home", "about", "contact"];
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
