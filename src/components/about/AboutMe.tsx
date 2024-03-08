@@ -1,8 +1,9 @@
 "use client";
 import {useState, useEffect} from "react";
-import {motion, AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import {TypewriterEffect} from "@/components/ui/typewriter-effect.tsx";
-import {Separator} from "@/components/ui/separator.tsx";
+import WhoAmI from "./WhoAmI.tsx";
+import CommandList from "./CommandList.tsx";
 
 export default function AboutMe() {
     const words = [
@@ -12,12 +13,12 @@ export default function AboutMe() {
 
     const [showTypewriter, setShowTypewriter] = useState(true);
     const [showList, setShowList] = useState(false);
+    const [showCommand, setShowCommand] = useState("");
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowTypewriter(false);
         }, 2500);
-
         return () => clearTimeout(timer);
     }, []);
 
@@ -25,13 +26,22 @@ export default function AboutMe() {
         setShowList(true);
     };
 
-    const handleClick = (command: string) => {
-        // Handle the click event for each command
-        console.log(`Clicked: ${command}`);
+    const handleCommandClick = (command: string) => {
+        setShowList(false);
+        setShowCommand(command);
+        window.scrollTo({top: 0, behavior: "smooth"});
+    };
+
+    const handleBackClick = () => {
+        setTimeout(() => {
+            setShowList(true);
+        }, 500);
+        setShowCommand("");
+        window.scrollTo({top: 0, behavior: "smooth"});
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="flex flex-col items-center justify-center min-h-full">
             <AnimatePresence onExitComplete={handleTypewriterExit}>
                 {showTypewriter && (
                     <motion.div
@@ -45,33 +55,18 @@ export default function AboutMe() {
                 )}
             </AnimatePresence>
 
-            {showList && (
-                <motion.ul
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{delay: 0, staggerChildren: 0.5}}
-                    className="flex flex-col items-center justify-center min-h-screen"
-                >
-                    {["whoami", "edu --list", "experience --recent", "skills --top"].map(
-                        (command, index) => (
-                            <motion.li
-                                key={command}
-                                initial={{opacity: 0, y: 50}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{delay: index * 0.3}}
-                                className="cursor-pointer font-mono w-full text-lg sm:text-xl lg:text-2xl  hover:text-violet-500 transition-colors duration-300 ease-in-out"
-                                onClick={() => handleClick(command)}
-                            >
-                                {command}
-                                {index !== 3 && (
-                                    <Separator className="my-4 sm:my-6 lg:my-8 w-full"/>
-                                )}
-                            </motion.li>
-                        )
-                    )}
-                </motion.ul>
+            <AnimatePresence>
+                {showList && (
+                    <CommandList key="list" onCommandClick={handleCommandClick}/>
+                )}
+            </AnimatePresence>
 
-            )}
+            <AnimatePresence>
+                {showCommand === "whoami" && (
+                    <WhoAmI key="whoami" onBackClick={handleBackClick}/>
+                )}
+                {/* Add more command components here */}
+            </AnimatePresence>
         </div>
     );
 }
