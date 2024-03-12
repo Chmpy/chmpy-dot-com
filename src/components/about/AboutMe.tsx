@@ -4,6 +4,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import {TypewriterEffect} from "@/components/ui/typewriter-effect.tsx";
 import WhoAmI from "./WhoAmI.tsx";
 import CommandList from "./CommandList.tsx";
+import EduList from "@/components/about/EduList.tsx";
 
 export default function AboutMe() {
     const words = [
@@ -67,7 +68,9 @@ export default function AboutMe() {
                 {showCommand === "whoami" && (
                     <WhoAmI key="whoami" onBackClick={handleBackClick}/>
                 )}
-                {/* Add more command components here */}
+                {showCommand === "edu --list" && (
+                   <EduList key="edu" onBackClick={handleBackClick}/>
+                )}
             </AnimatePresence>
         </div>
     );
