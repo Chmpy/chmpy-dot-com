@@ -5,6 +5,7 @@ import {TypewriterEffect} from "@/components/ui/typewriter-effect.tsx";
 import WhoAmI from "./WhoAmI.tsx";
 import CommandList from "./CommandList.tsx";
 import EduList from "@/components/about/EduList.tsx";
+import Experience from "@/components/about/Experience.tsx";
 
 export default function AboutMe() {
     const words = [
@@ -31,7 +32,7 @@ export default function AboutMe() {
         setShowList(false);
         setTimeout(() => {
             setShowCommand(command);
-        } , 1500);
+        }, 1500);
         window.scrollTo({top: 0, behavior: "smooth"});
     };
 
@@ -69,7 +70,10 @@ export default function AboutMe() {
                     <WhoAmI key="whoami" onBackClick={handleBackClick}/>
                 )}
                 {showCommand === "edu --list" && (
-                   <EduList key="edu" onBackClick={handleBackClick}/>
+                    <EduList key="edu" onBackClick={handleBackClick}/>
+                )}
+                {showCommand === "experience --recent" && (
+                    <Experience key="experience" onBackClick={handleBackClick}/>
                 )}
             </AnimatePresence>
         </div>
