@@ -28,7 +28,9 @@ export default function AboutMe() {
 
     const handleCommandClick = (command: string) => {
         setShowList(false);
-        setShowCommand(command);
+        setTimeout(() => {
+            setShowCommand(command);
+        } , 1500);
         window.scrollTo({top: 0, behavior: "smooth"});
     };
 

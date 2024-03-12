@@ -9,7 +9,7 @@ export default function CommandList({onCommandClick}: CommandListProps) {
     const listVariants = {
         hidden: {opacity: 0},
         visible: {opacity: 1},
-        exit: {opacity: 0},
+        exit: {opacity: 0, transition: {delay: 0.75}},
     };
 
     const itemVariants = {
@@ -26,7 +26,7 @@ export default function CommandList({onCommandClick}: CommandListProps) {
             animate="visible"
             exit="exit"
             transition={{delay: 0, staggerChildren: 0.5}}
-            className="flex flex-col items-center justify-center min-h-screen"
+            className="flex flex-col items-center justify-center min-h-full"
         >
             {["whoami", "edu --list", "experience --recent", "skills --top"].map(
                 (command, index) => (
