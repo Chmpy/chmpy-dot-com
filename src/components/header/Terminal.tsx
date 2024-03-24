@@ -10,7 +10,7 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
     const [command, setCommand] = useState("");
     const [output, setOutput] = useState("");
 
-    const pages = ["home", "about", "projects", "contact"];
+    const pages = ["home", "about", "contact"];
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -48,7 +48,7 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                         <p>Enter 'ls' to see available pages or 'cd &lt;page&gt; ' to navigate.</p>
                     </div>
                     <div className="mb-4">
-                        <pre>{output}</pre>
+                        <pre className="text-wrap">{output}</pre>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="flex">

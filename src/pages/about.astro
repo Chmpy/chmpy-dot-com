@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/about/AboutMe.tsx";
 ---
 <Layout title="About">
-    <div class="relative flex flex-col items-center justify-center h-[10rem]">
-        <h1>About</h1>
-    </div>
+    <AboutMe client:idle/>
 </Layout>
