@@ -1,4 +1,3 @@
-import {ArrowLeftIcon} from "lucide-react";
 import {motion} from "framer-motion";
 import {
     SiTypescript,
@@ -30,11 +29,7 @@ import {DiJava} from "react-icons/di";
 import {FaRobot} from "react-icons/fa";
 import {AnimatedTooltip} from "@/components/ui/animated-tooltip.tsx";
 
-interface SkillsProps {
-    onBackClick: () => void;
-}
-
-export default function Skills({onBackClick}: SkillsProps) {
+export default function Skills() {
     const icons = [
         // Frontend technologies
         <SiHtml5 title="HTML5" className="h-24 w-24 md:h-28 md:w-28  text-orange-500"/>,
@@ -82,21 +77,11 @@ export default function Skills({onBackClick}: SkillsProps) {
             transition={{delay: 0, duration: 0.5, ease: "easeInOut"}}
         >
             <div className="max-w-3xl mx-auto px-6 py-28 sm:px-8 lg:px-10">
-                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-8 overflow-hidden py-8 px-2 sm:px-4 md:px-6">
+                <div
+                    className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-8 overflow-hidden py-8 px-2 sm:px-4 md:px-6">
                     <AnimatedTooltip icons={icons}/>
                 </div>
             </div>
-            <button
-                className="absolute bottom-20 left-1/2 transform -translate-x-1/2 inline-flex h-12 w-16 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-                onClick={onBackClick}
-            >
-                <span
-                    className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"/>
-                <span
-                    className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-          <ArrowLeftIcon className="h-5 w-5"/>
-        </span>
-            </button>
         </motion.div>
     );
 }
