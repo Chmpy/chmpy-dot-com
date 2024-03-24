@@ -35,6 +35,7 @@
     "lucide-react": "^0.343.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "react-morph": "^0.4.0",
     "react-spring": "^9.7.3",
     "tailwind-merge": "^2.2.1",

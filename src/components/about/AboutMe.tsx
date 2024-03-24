@@ -6,6 +6,7 @@ import WhoAmI from "./WhoAmI.tsx";
 import CommandList from "./CommandList.tsx";
 import EduList from "@/components/about/EduList.tsx";
 import Experience from "@/components/about/Experience.tsx";
+import Skills from "@/components/about/Skills.tsx";
 
 export default function AboutMe() {
     const words = [
@@ -74,6 +75,9 @@ export default function AboutMe() {
                 )}
                 {showCommand === "experience --recent" && (
                     <Experience key="experience" onBackClick={handleBackClick}/>
+                )}
+                {showCommand === "skills --top" && (
+                    <Skills key="skills" onBackClick={handleBackClick}/>
                 )}
             </AnimatePresence>
         </div>
