@@ -29,8 +29,11 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                     setOutput("Destination doesn't exist. Please choose from the available pages.");
                 }
                 break;
+            case "help":
+                setOutput("");
+                break;
             default:
-                setOutput("Invalid command. Available commands: ls, cd");
+                setOutput("Invalid command. Available commands: ls, cd, help");
         }
 
         setCommand("");
@@ -38,17 +41,25 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
 
     return (
         <Drawer open={open} onOpenChange={onOpenChange}>
-            <DrawerContent>
+            <DrawerContent className="h-[calc(100vh-8rem)]">
                 <DrawerHeader>
                     <DrawerTitle>Terminal</DrawerTitle>
                 </DrawerHeader>
-                <div className="p-4 rounded-md">
-                    <div className="mb-4">
-                        <p>Welcome to the terminal!</p>
-                        <p>Enter 'ls' to see available pages or 'cd &lt;page&gt; ' to navigate.</p>
-                    </div>
-                    <div className="mb-4">
-                        <pre className="text-wrap">{output}</pre>
+                <div className="h-full p-4 rounded-md flex flex-col justify-between mb-4">
+                    <div>
+                        <div className="mb-4">
+                            {!output && (
+                                <><p>Welcome to the terminal!</p><p>
+                                    Available commands: <br/>
+                                    ls - Lists available pages <br/>
+                                    cd &lt;page&gt; - Navigates to a specified page <br/>
+                                    help - Displays this help message
+                                </p></>
+                            )}
+                        </div>
+                        <div className="mb-4">
+                            <pre className="text-wrap">{output}</pre>
+                        </div>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="flex">
