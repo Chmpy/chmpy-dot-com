@@ -81,7 +81,7 @@ export const AnimatedTooltip = ({
                                 }}
                                 className="absolute -top-6 flex text-xs flex-col items-center justify-center rounded-md z-50 px-4 py-2"
                             >
-                                <div className="font-bold relative z-30 text-base">
+                                <div className="font-bold relative z-30 text-xs sm:text-sm md:text-base">
                                     {icon.props.title}
                                 </div>
                             </motion.div>
