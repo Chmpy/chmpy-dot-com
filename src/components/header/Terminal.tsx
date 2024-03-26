@@ -8,7 +8,7 @@ interface TerminalProps {
 
 const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
     const [command, setCommand] = useState("");
-    const [output, setOutput] = useState("");
+    const [output, setOutput] = useState<React.ReactNode>(" ");
 
     const pages = ["home", "about", "contact"];
 
@@ -18,7 +18,13 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
 
         switch (cmd.toLowerCase()) {
             case "ls":
-                setOutput(pages.join(" "));
+                setOutput((() => (
+                    <nav className="flex space-x-6">
+                        {pages.map((page) => (
+                            <a key={page} href={`/${page}`} className="underline">{page}</a>
+                        ))}
+                    </nav>
+                )));
                 break;
             case "cd":
                 if (!arg) {
@@ -61,9 +67,7 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                         )}
                     </div>
                     <div className="mb-4">
-                        {output.trim() != "" &&
-                            <pre className="text-wrap">{output}</pre>
-                        }
+                        {output}
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="flex">
