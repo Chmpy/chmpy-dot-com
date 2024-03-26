@@ -30,6 +30,9 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                 }
                 break;
             case "help":
+                setOutput(" ");
+                break;
+            case "clear":
                 setOutput("");
                 break;
             default:
@@ -45,15 +48,16 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                 <DrawerHeader>
                     <DrawerTitle>Terminal</DrawerTitle>
                 </DrawerHeader>
-                <div className="h-full p-4 rounded-md flex flex-col justify-between mb-4">
+                <div className="h-full p-4 rounded-md flex flex-col mb-4">
                     <div>
                         <div className="mb-4">
-                            {!output && (
+                            {output == " " && (
                                 <><p>Welcome to the terminal!</p><p>
                                     Available commands: <br/>
                                     ls - Lists available pages <br/>
                                     cd &lt;page&gt; - Navigates to a specified page <br/>
                                     help - Displays this help message
+                                    clear - Clears the terminal
                                 </p></>
                             )}
                         </div>
