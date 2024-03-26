@@ -36,7 +36,7 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                 setOutput("");
                 break;
             default:
-                setOutput("Invalid command. Available commands: ls, cd, help");
+                setOutput("Invalid command. Available commands: ls, cd, help, clear");
         }
 
         setCommand("");
@@ -50,20 +50,20 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                 </DrawerHeader>
                 <div className="h-full p-4 rounded-md flex flex-col mb-4">
                     <div>
-                        <div className="mb-4">
-                            {output == " " && (
-                                <><p>Welcome to the terminal!</p><p>
-                                    Available commands: <br/>
-                                    ls - Lists available pages <br/>
-                                    cd &lt;page&gt; - Navigates to a specified page <br/>
-                                    help - Displays this help message
-                                    clear - Clears the terminal
-                                </p></>
-                            )}
-                        </div>
-                        <div className="mb-4">
+                        {output == " " && (
+                            <><p>Welcome to the terminal!</p><p>
+                                Available commands: <br/>
+                                ls - Lists available pages <br/>
+                                cd &lt;page&gt; - Navigates to a specified page <br/>
+                                help - Displays this help message <br/>
+                                clear - Clears the terminal
+                            </p></>
+                        )}
+                    </div>
+                    <div className="mb-4">
+                        {output.trim() != "" &&
                             <pre className="text-wrap">{output}</pre>
-                        </div>
+                        }
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="flex">
