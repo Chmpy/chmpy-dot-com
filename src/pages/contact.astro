@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContactPage from "../components/contact/Contact.tsx";
 ---
 <Layout title="Contact">
-    <div class="relative flex flex-col items-center justify-center h-[10rem]">
-        <h1>Contact</h1>
-    </div>
+    <ContactPage client:idle/>
 </Layout>
