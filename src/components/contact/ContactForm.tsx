@@ -4,9 +4,9 @@ import {z} from "zod";
 import {Form, FormControl, FormDescription, FormItem, FormLabel} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
-import sgMail from "@sendgrid/mail";
 import NotificationPopup from "@/components/contact/NotificationPopup.tsx";
-import {useState} from "react";
+import {useRef, useState} from "react";
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
     name: z.string().min(1, "Name is required"),
@@ -24,20 +24,19 @@ export default function ContactForm() {
     });
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
     const [isMessageSent, setIsMessageSent] = useState(false);
+    const formRef = useRef<HTMLFormElement>(null)
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        sgMail.setApiKey(import.meta.env.SENDGRID_API_KEY);
-        const msg:  sgMail.MailDataRequired = {
-            to: import.meta.env.SENDGRID_TO_EMAIL,
-            from: values.email,
-            subject: `New message from ${values.name}`,
-            text: values.message,
-        };
-        sgMail.send(msg).then(() => {
-            setIsMessageSent(true);
-            setIsNotificationOpen(true);
-            form.reset();
-        }).catch((error) => {
+        emailjs.init({
+            publicKey: 'O96Dm5PFV49o51Lji'
+        })
+        emailjs.sendForm('service_h62juze', 'template_wnft52s', formRef.current
+        ).then(() => {
+                setIsMessageSent(true),
+                    setIsNotificationOpen(true),
+                    form.reset()
+            }
+        ).catch((error) => {
             console.error(error);
             setIsMessageSent(false);
             setIsNotificationOpen(true);
@@ -50,7 +49,7 @@ export default function ContactForm() {
 
     return (
         <><Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
