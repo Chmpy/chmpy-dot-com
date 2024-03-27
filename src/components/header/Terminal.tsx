@@ -8,7 +8,7 @@ interface TerminalProps {
 
 const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
     const [command, setCommand] = useState("");
-    const [output, setOutput] = useState("");
+    const [output, setOutput] = useState<React.ReactNode>(" ");
 
     const pages = ["home", "about", "contact"];
 
@@ -18,7 +18,13 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
 
         switch (cmd.toLowerCase()) {
             case "ls":
-                setOutput(pages.join(" "));
+                setOutput((() => (
+                    <nav className="flex space-x-6">
+                        {pages.map((page) => (
+                            <a key={page} href={`/${page}`} className="underline">{page}</a>
+                        ))}
+                    </nav>
+                )));
                 break;
             case "cd":
                 if (!arg) {
@@ -29,8 +35,14 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
                     setOutput("Destination doesn't exist. Please choose from the available pages.");
                 }
                 break;
+            case "help":
+                setOutput(" ");
+                break;
+            case "clear":
+                setOutput("");
+                break;
             default:
-                setOutput("Invalid command. Available commands: ls, cd");
+                setOutput("Invalid command. Available commands: ls, cd, help, clear");
         }
 
         setCommand("");
@@ -38,17 +50,24 @@ const Terminal: React.FC<TerminalProps> = ({open, onOpenChange}) => {
 
     return (
         <Drawer open={open} onOpenChange={onOpenChange}>
-            <DrawerContent>
+            <DrawerContent className="h-[calc(100vh-8rem)]">
                 <DrawerHeader>
                     <DrawerTitle>Terminal</DrawerTitle>
                 </DrawerHeader>
-                <div className="p-4 rounded-md">
-                    <div className="mb-4">
-                        <p>Welcome to the terminal!</p>
-                        <p>Enter 'ls' to see available pages or 'cd &lt;page&gt; ' to navigate.</p>
+                <div className="h-full p-4 rounded-md flex flex-col mb-4">
+                    <div>
+                        {output == " " && (
+                            <><p>Welcome to the terminal!</p><p>
+                                Available commands: <br/>
+                                ls - Lists available pages <br/>
+                                cd &lt;page&gt; - Navigates to a specified page <br/>
+                                help - Displays this help message <br/>
+                                clear - Clears the terminal
+                            </p></>
+                        )}
                     </div>
                     <div className="mb-4">
-                        <pre className="text-wrap">{output}</pre>
+                        {output}
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="flex">
