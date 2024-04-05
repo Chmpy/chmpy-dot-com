@@ -34,12 +34,12 @@ export default function CommandList({onCommandClick}: CommandListProps) {
                         key={command}
                         variants={itemVariants}
                         transition={{delay: index * 0.3}}
-                        className="cursor-pointer font-mono w-full text-lg sm:text-xl lg:text-2xl hover:text-violet-500 transition-colors duration-300 ease-in-out"
+                        className="cursor-pointer font-mono w-full text-xl md:text-2xl hover:text-violet-500 transition-colors duration-300 ease-in-out"
                         onClick={() => onCommandClick(command)}
                     >
                         {command}
                         {index !== 3 && (
-                            <Separator className="my-4 sm:my-6 lg:my-8 w-full"/>
+                            <Separator className="my-8 w-full"/>
                         )}
                     </motion.li>
                 )
