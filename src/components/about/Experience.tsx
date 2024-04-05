@@ -15,10 +15,31 @@ export default function Experience() {
             exit={{opacity: 0, x: 50}}
             transition={{delay: 0, duration: 0.5, ease: "easeInOut"}}
         >
-            <div className="max-w-md mx-auto px-6 py-28 sm:px-8 lg:px-10">
+            <div className="max-w-2xl w-dvw mx-auto px-8 py-28 sm:px-10">
                 <div className="py-8">
                     <h3 className="text-xl font-bold mb-2">Professional Experience</h3>
                     <Accordion type="single" collapsible className="mt-4">
+                        <AccordionItem value="development-monitors">
+                            <AccordionTrigger>
+                                <p className="p-2 text-start">
+                                    Development Monitors
+                                </p>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <h4 className="text-lg font-bold">Software & AI Engineer Intern</h4>
+                                <p className="text-gray-600">Feb 2024 - April 2024</p>
+                                <ul className="list-disc list-inside mt-2">
+                                    <li>Conduct research on AI, LLM's and machine learning algorithms</li>
+                                    <li>Develop and maintain software applications</li>
+                                    <li>Implement new AI based features and functionalities</li>
+                                    <li>Collaborate with team members on various projects</li>
+                                    <li>Assist in development of codebase architecture</li>
+                                    <li>Participate in code reviews, testing and documentation</li>
+                                    <li>Present findings and results to team members and clients</li>
+                                    <li>Work with clients to understand their needs and requirements</li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="it-support">
                             <AccordionTrigger>
                                 <p className="p-2 text-start">
@@ -26,7 +47,7 @@ export default function Experience() {
                                 </p>
                             </AccordionTrigger>
                             <AccordionContent>
-                                <h4 className="text-lg font-bold">Information Technology Help Desk Support</h4>
+                                <h4 className="text-lg font-bold">Information Technology Help Desk Support & System Administrator</h4>
                                 <p className="text-gray-600">Jul 2021 & Aug 2022 - Summer job</p>
                                 <ul className="list-disc list-inside mt-2">
                                     <li>Managed helpdesk requests using a Kanban system</li>

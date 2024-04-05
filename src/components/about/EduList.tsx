@@ -34,7 +34,7 @@ export default function EduList() {
                         <p className="text-gray-600">Challenge by:
                             <a className="underline px-2" target="_blank" href="https://www.delen.be/">Delen Private
                                 Banking</a></p>
-                        <p>Place: 1st - Student & Professionals</p>
+                        <p>Place: 1st - Student & Professional</p>
                         <div/>
                     </div>
 

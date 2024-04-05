@@ -10,7 +10,7 @@ export default function WhoAmI() {
             exit={{opacity: 0, x: 50}}
             transition={{delay: 0, duration: 0.5, ease: "easeInOut"}}
         >
-            <div className="max-w-xl mx-auto px-6 py-28 sm:px-8 lg:px-10">
+            <div className="max-w-xl mx-auto px-6 py-28">
                 <p className="mb-6 text-sm md:text-base">
                     I am a 21-year-old software engineering student from Belgium, on the brink of graduation and open to
                     opportunities worldwide. My journey in software development is driven by an unyielding passion for
@@ -20,7 +20,7 @@ export default function WhoAmI() {
 
                 <Separator/>
 
-                <blockquote className="text-lg sm:text-xl lg:text-2xl font-bold my-8 text-violet-500">
+                <blockquote className="text-lg sm:text-xl font-bold my-8 text-violet-500">
                     "Knowledge is power." – Francis Bacon
                 </blockquote>
 
