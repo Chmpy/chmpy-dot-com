@@ -9,7 +9,7 @@ export default function EduList() {
             exit={{opacity: 0, x: 50}}
             transition={{delay: 0, duration: 0.5, ease: "easeInOut"}}
         >
-            <div className="max-w-xl mx-auto px-6 sm:px-8 py-28 flex flex-col ">
+            <div className="max-w-xl mx-auto px-6 sm:px-8 py-28 flex flex-col">
                 <div className="py-8">
                     <h3 className="text-xl font-bold mb-2">Education</h3>
                     <div className="mt-4">
