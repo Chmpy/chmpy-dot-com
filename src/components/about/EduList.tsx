@@ -16,7 +16,7 @@ export default function EduList() {
                         <h4 className="text-lg font-bold">Bachelor of Science in Applied Computer Science</h4>
                         <p className="text-gray-600">Ghent University of Applied Sciences and Arts <br/>Feb 2021 - Jun
                             2024</p>
-                        <p className="mt-2">Specialisation: Mobile & Enterprise developer</p>
+                        <p className="mt-2">Specialisation: Mobile & Enterprise development</p>
                     </div>
                     <div className="mt-4">
                         <h4 className="text-lg font-bold">The Washington Center for Internships and Academic Seminars</h4>
