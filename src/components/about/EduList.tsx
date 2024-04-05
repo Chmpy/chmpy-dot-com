@@ -28,7 +28,7 @@ export default function EduList() {
                     <h3 className="text-xl font-bold mb-2">Competition</h3>
 
                     <div className="mt-4">
-                        <h4 className="text-lg font-bold">.Net Challenge - Delen Private Banking</h4>
+                        <h4 className="text-lg font-bold">.NET Challenge</h4>
                         <p className="text-gray-600">Algorithmic competition - Dec 2023</p>
                         <p className="text-gray-600">Team size: 1</p>
                         <p className="text-gray-600">Challenge by:
@@ -39,7 +39,7 @@ export default function EduList() {
                     </div>
 
                     <div className="mt-4">
-                        <h4 className="text-lg font-bold">Vlaamse Programmeer Wedstrijd</h4>
+                        <h4 className="text-lg font-bold">The Flemish Programming Competition</h4>
                         <p className="text-gray-600">Algorithmic competition - Feb 2023</p>
                         <p className="text-gray-600">Team size: 3</p>
                         <p className="text-gray-600">Challenge by:
