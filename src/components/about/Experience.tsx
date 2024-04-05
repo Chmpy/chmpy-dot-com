@@ -15,10 +15,31 @@ export default function Experience() {
             exit={{opacity: 0, x: 50}}
             transition={{delay: 0, duration: 0.5, ease: "easeInOut"}}
         >
-            <div className="max-w-md mx-auto px-6 py-28 sm:px-8 lg:px-10">
+            <div className="max-w-2xl w-dvw mx-auto px-8 py-28 sm:px-10">
                 <div className="py-8">
                     <h3 className="text-xl font-bold mb-2">Professional Experience</h3>
                     <Accordion type="single" collapsible className="mt-4">
+                        <AccordionItem value="development-monitors">
+                            <AccordionTrigger>
+                                <p className="p-2 text-start">
+                                    Development Monitors
+                                </p>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <h4 className="text-lg font-bold">Software & AI Engineer Intern</h4>
+                                <p className="text-gray-600">Feb 2024 - April 2024</p>
+                                <ul className="list-disc list-inside mt-2">
+                                    <li>Conduct research on AI, LLM's and machine learning algorithms</li>
+                                    <li>Develop and maintain software applications</li>
+                                    <li>Implement new AI based features and functionalities</li>
+                                    <li>Collaborate with team members on various projects</li>
+                                    <li>Assist in development of codebase architecture</li>
+                                    <li>Participate in code reviews, testing and documentation</li>
+                                    <li>Present findings and results to team members and clients</li>
+                                    <li>Work with clients to understand their needs and requirements</li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="it-support">
                             <AccordionTrigger>
                                 <p className="p-2 text-start">
@@ -26,7 +47,8 @@ export default function Experience() {
                                 </p>
                             </AccordionTrigger>
                             <AccordionContent>
-                                <h4 className="text-lg font-bold">Information Technology Help Desk Support</h4>
+                                <h4 className="text-lg font-bold">Information Technology Help Desk Support & System
+                                    Administrator</h4>
                                 <p className="text-gray-600">Jul 2021 & Aug 2022 - Summer job</p>
                                 <ul className="list-disc list-inside mt-2">
                                     <li>Managed helpdesk requests using a Kanban system</li>
@@ -45,6 +67,25 @@ export default function Experience() {
                 <div className="py-8">
                     <h3 className="text-xl font-bold mb-2">Technical Projects</h3>
                     <Accordion type="single" collapsible className="mt-4">
+                        <AccordionItem value="loof-meals">
+                            <AccordionTrigger>
+                                <p className="p-2 text-start">
+                                    Loof Meals - Android Application
+                                </p>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <p>Independently developed a mobile application using Kotlin, Retrofit, Room for offline
+                                    usage and MVVM architecture, with complete testing and documentation. The
+                                    application is a proof of concept for a restaurant search system that caters to
+                                    individuals with disabilities, encompassing various forms such as mobility and
+                                    auditory impairments. The application aims to facilitate an effortless search for
+                                    restaurants that adhere to accessibility standards set forth by the Belgian
+                                    government in the region of Flanders and Brussels with government data.
+                                </p>
+                                <a href="https://github.com/Chmpy/LoofMeals" target="_blank"
+                                   className="text-purple-500 underline">https://github.com/Chmpy/LoofMeals</a>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="svk">
                             <AccordionTrigger>
                                 <p className="p-2 text-start">
@@ -60,7 +101,7 @@ export default function Experience() {
                                     control system. Enabled management and customers to monitor orders, ensuring correct
                                     shipment and providing access to order profiles and related functionalities.</p>
                                 <a href="https://www.svk.be" target="_blank"
-                                   className="text-blue-500 underline">https://www.svk.be</a>
+                                   className="text-purple-500 underline">https://www.svk.be</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="amalias">
@@ -79,7 +120,7 @@ export default function Experience() {
                                     activities from an integrated dashboard within the web application, providing them
                                     with oversight of activities and user registrations.</p>
                                 <a href="https://www.ms-vlaanderen.be" target="_blank"
-                                   className="text-blue-500 underline">https://www.ms-vlaanderen.be</a>
+                                   className="text-purple-500 underline">https://www.ms-vlaanderen.be</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="library">
@@ -117,13 +158,13 @@ export default function Experience() {
                                     robust system. The project was executed as a proof of concept (POC), demonstrating
                                     the system's feasibility and functionality.</p>
                                 <a href="https://www.delaware.pro" target="_blank"
-                                   className="text-blue-500 underline">https://www.delaware.pro</a>
+                                   className="text-purple-500 underline">https://www.delaware.pro</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="loof">
                             <AccordionTrigger>
                                 <p className="p-2 text-start">
-                                    Loof - Discord Bot
+                                    Loof Bot - Discord Bot
                                 </p>
                             </AccordionTrigger>
                             <AccordionContent>

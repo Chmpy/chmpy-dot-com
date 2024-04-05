@@ -28,18 +28,18 @@ export default function CommandList({onCommandClick}: CommandListProps) {
             transition={{delay: 0, staggerChildren: 0.5}}
             className="flex flex-col items-center justify-center min-h-full px-6 py-28 sm:px-8 lg:px-10"
         >
-            {["whoami", "edu --list", "experience --recent", "skills --top"].map(
+            {["whoami", "edu --list", "experience --recent", "skills --sorted"].map(
                 (command, index) => (
                     <motion.li
                         key={command}
                         variants={itemVariants}
                         transition={{delay: index * 0.3}}
-                        className="cursor-pointer font-mono w-full text-lg sm:text-xl lg:text-2xl hover:text-violet-500 transition-colors duration-300 ease-in-out"
+                        className="cursor-pointer font-mono w-full text-xl md:text-2xl hover:text-violet-500 transition-colors duration-300 ease-in-out"
                         onClick={() => onCommandClick(command)}
                     >
                         {command}
                         {index !== 3 && (
-                            <Separator className="my-4 sm:my-6 lg:my-8 w-full"/>
+                            <Separator className="my-8 w-full"/>
                         )}
                     </motion.li>
                 )

@@ -77,7 +77,7 @@ export default function AboutMe() {
                 {showCommand === "experience --recent" && (
                     <Experience key="experience"/>
                 )}
-                {showCommand === "skills --top" && (
+                {showCommand === "skills --sorted" && (
                     <Skills key="skills"/>
                 )}
             </AnimatePresence>
