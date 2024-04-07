@@ -26,7 +26,7 @@ export default function CommandList({onCommandClick}: CommandListProps) {
             animate="visible"
             exit="exit"
             transition={{delay: 0, staggerChildren: 0.5}}
-            className="flex flex-col items-center justify-center min-h-full px-6 py-28 sm:px-8 lg:px-10"
+            className="flex flex-col items-center justify-center min-h-full px-6 pt-44 pb-28 sm:px-8 lg:px-10"
         >
             {["whoami", "edu --list", "experience --recent", "skills --sorted"].map(
                 (command, index) => (

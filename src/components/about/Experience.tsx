@@ -64,7 +64,7 @@ export default function Experience() {
                         </AccordionItem>
                     </Accordion>
                 </div>
-                <div className="py-8">
+                <div className="pt-8 pb-12">
                     <h3 className="text-xl font-bold mb-2">Technical Projects</h3>
                     <Accordion type="single" collapsible className="mt-4">
                         <AccordionItem value="loof-meals">
@@ -83,7 +83,7 @@ export default function Experience() {
                                     government in the region of Flanders and Brussels with government data.
                                 </p>
                                 <a href="https://github.com/Chmpy/LoofMeals" target="_blank"
-                                   className="text-purple-500 underline">https://github.com/Chmpy/LoofMeals</a>
+                                   className="text-violet-500 underline">https://github.com/Chmpy/LoofMeals</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="svk">
@@ -101,7 +101,7 @@ export default function Experience() {
                                     control system. Enabled management and customers to monitor orders, ensuring correct
                                     shipment and providing access to order profiles and related functionalities.</p>
                                 <a href="https://www.svk.be" target="_blank"
-                                   className="text-purple-500 underline">https://www.svk.be</a>
+                                   className="text-violet-500 underline">https://www.svk.be</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="amalias">
@@ -120,7 +120,7 @@ export default function Experience() {
                                     activities from an integrated dashboard within the web application, providing them
                                     with oversight of activities and user registrations.</p>
                                 <a href="https://www.ms-vlaanderen.be" target="_blank"
-                                   className="text-purple-500 underline">https://www.ms-vlaanderen.be</a>
+                                   className="text-violet-500 underline">https://www.ms-vlaanderen.be</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="library">
@@ -158,7 +158,7 @@ export default function Experience() {
                                     robust system. The project was executed as a proof of concept (POC), demonstrating
                                     the system's feasibility and functionality.</p>
                                 <a href="https://www.delaware.pro" target="_blank"
-                                   className="text-purple-500 underline">https://www.delaware.pro</a>
+                                   className="text-violet-500 underline">https://www.delaware.pro</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="loof">

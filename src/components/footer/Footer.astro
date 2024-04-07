@@ -1,6 +1,9 @@
 ---
-
+import NavigationBar from "../nav/NavigationBar";
 ---
-<footer class="py-4">
-    <p class="text-center">© 2024 Chmpy</p>
+<footer class="py-4 h-fit z-50">
+    <p class="text-center hidden sm:block">© 2024 Chmpy</p>
+    <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 sm:hidden">
+        <NavigationBar animationDirection={-1} client:load/>
+    </div>
 </footer>

@@ -78,7 +78,7 @@ export default function Skills() {
         >
             <div className="max-w-3xl mx-auto px-4 py-28 sm:px-8 lg:px-10">
                 <div
-                    className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 overflow-hidden py-8 px-2 sm:px-4 md:px-6">
+                    className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 overflow-hidden pt-8 pb-12 px-2 sm:px-4 md:px-6">
                     <AnimatedTooltip icons={icons}/>
                 </div>
             </div>
