@@ -25,7 +25,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-full px-2 py-28">
+        <div className="flex flex-col items-center justify-center min-h-full px-2 pt-40 pb-28">
             <AnimatePresence onExitComplete={handleTypewriterExit}>
                 {showTypewriter && (
                     <motion.div

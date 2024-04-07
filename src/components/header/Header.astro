@@ -1,6 +1,7 @@
 ---
 import ModeToggle from "./ModeToggle";
 import TerminalButton from "./TerminalButton";
+import NavigationBar from "@/components/nav/NavigationBar";
 ---
 
 <script is:inline>
@@ -22,9 +23,12 @@ import TerminalButton from "./TerminalButton";
     }
 </script>
 
-<header>
+<header class="z-50">
     <div class="absolute top-0 left-0 p-8">
         <TerminalButton client:load/>
+    </div>
+    <div class="absolute top-6 left-1/2 transform -translate-x-1/2 hidden sm:block">
+        <NavigationBar animationDirection={1} client:load/>
     </div>
     <div class="absolute top-0 right-0 p-8">
         <ModeToggle client:load/>

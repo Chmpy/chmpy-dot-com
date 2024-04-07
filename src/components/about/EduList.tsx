@@ -24,7 +24,7 @@ export default function EduList() {
                         <p className="mt-2">Class: SP4010 - Cybersecurity Policy</p>
                     </div>
                 </div>
-                <div className="py-8">
+                <div className="pt-8 pb-12">
                     <h3 className="text-xl font-bold mb-2">Competition</h3>
 
                     <div className="mt-4">
