@@ -22,7 +22,11 @@ import {
     SiKotlin,
     SiPostgresql,
     SiAmazonaws,
-    SiMicrosoftazure, SiAstro
+    SiMicrosoftazure,
+    SiAstro,
+    SiSolidity,
+    SiWeb3Dotjs,
+    SiFramer,
 } from "react-icons/si";
 import {DiJava} from "react-icons/di";
 
@@ -38,6 +42,7 @@ export default function Skills() {
         <SiTypescript title="TypeScript" className="size-16 md:h-28 md:w-28 max-w-64 text-blue-500"/>,
         <SiReact title="React" className="size-16 md:h-28 md:w-28  text-blue-500"/>,
         <SiNextdotjs title="Next.js" className="size-16 md:h-28 md:w-28  text-gray-700"/>,
+        <SiFramer title="Framer" className="size-16 md:h-28 md:w-28  text-pink-500"/>,
         <SiAstro title="Astro" className="size-16 md:h-28 md:w-28  text-orange-500"/>,
         <SiBootstrap title="Bootstrap" className="size-16 md:h-28 md:w-28  text-purple-500"/>,
         <SiTailwindcss title="Tailwind" className="size-16 md:h-28 md:w-28  text-sky-500"/>,
@@ -66,6 +71,10 @@ export default function Skills() {
         <SiAndroid title="Android" className="size-16 md:h-28 md:w-28  text-green-600"/>,
         <SiKotlin title="Kotlin" className="size-16 md:h-28 md:w-28  text-purple-500"/>,
         <FaRobot title="AI/LLMs" className="size-16 md:h-28 md:w-28  text-gray-500"/>,
+
+        // Blockchain
+        <SiSolidity title="Solidity" className="size-16 md:h-28 md:w-28  text-gray-400"/>,
+        <SiWeb3Dotjs title="Web3.js" className="size-16 md:h-28 md:w-28  text-orange-400"/>,
     ];
 
     return (

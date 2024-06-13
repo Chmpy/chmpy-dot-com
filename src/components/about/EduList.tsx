@@ -19,13 +19,25 @@ export default function EduList() {
                         <p className="mt-2">Specialisation: Mobile & Enterprise development</p>
                     </div>
                     <div className="mt-4">
-                        <h4 className="text-lg font-bold">The Washington Center for Internships and Academic Seminars</h4>
+                        <h4 className="text-lg font-bold">The Washington Center for Internships and Academic
+                            Seminars</h4>
                         <p className="text-gray-600">Washington D.C. <br/>Feb 2024 - Apr 2024</p>
                         <p className="mt-2">Class: SP4010 - Cybersecurity Policy</p>
                     </div>
                 </div>
                 <div className="pt-8 pb-12">
                     <h3 className="text-xl font-bold mb-2">Competition</h3>
+
+                    <div className="mt-4">
+                        <h4 className="text-lg font-bold">ETHPrague</h4>
+                        <p className="text-gray-600">Hackathon - Jun 2024</p>
+                        <p className="text-gray-600">Team size: 5</p>
+                        <p className="text-gray-600">Project:
+                            <a className="underline px-2" target="_blank"
+                               href="https://devfolio.co/projects/chess-f437">Chess3</a>
+                        </p>
+                        <p>Place: 1st - Best dApp deployed on Linea</p>
+                    </div>
 
                     <div className="mt-4">
                         <h4 className="text-lg font-bold">.NET Challenge</h4>
@@ -35,7 +47,6 @@ export default function EduList() {
                             <a className="underline px-2" target="_blank" href="https://www.delen.be/">Delen Private
                                 Banking</a></p>
                         <p>Place: 1st - Student & Professional</p>
-                        <div/>
                     </div>
 
                     <div className="mt-4">
@@ -44,9 +55,9 @@ export default function EduList() {
                         <p className="text-gray-600">Team size: 3</p>
                         <p className="text-gray-600">Challenge by:
                             <a className="underline px-2" target="_blank"
-                               href="https://www.vlaamseprogrammeerwedstrijd.be/">Vlaamse Programmeer Wedstrijd</a></p>
+                               href="https://www.vlaamseprogrammeerwedstrijd.be/">Vlaamse Programmeer Wedstrijd</a>
+                        </p>
                         <p>Place: 6th - Category II</p>
-                        <div/>
                     </div>
 
                     <div className="mt-4">
@@ -56,7 +67,6 @@ export default function EduList() {
                         <p className="text-gray-600">Challenge by:
                             <a className="underline px-2" target="_blank" href="https://i8c.nl/">I8C</a></p>
                         <p>Place: 2nd</p>
-                        <div/>
                     </div>
                 </div>
             </div>
