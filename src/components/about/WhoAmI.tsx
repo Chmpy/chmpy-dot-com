@@ -13,7 +13,7 @@ export default function WhoAmI() {
             <div className="max-w-xl mx-auto px-6 py-28">
                 <div className="pt-8 pb-12">
                     <p className="mb-6 text-sm md:text-base">
-                        I am a 21-year-old software engineering student from Belgium, on the brink of graduation and
+                        I am a 22-year-old software engineering student from Belgium, on the brink of graduation and
                         open to
                         opportunities worldwide. My journey in software development is driven by an unyielding passion
                         for
