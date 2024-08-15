@@ -26,8 +26,8 @@ export default function Experience() {
                                 </p>
                             </AccordionTrigger>
                             <AccordionContent>
-                                <h4 className="text-lg font-bold">Software & AI Engineer Intern</h4>
-                                <p className="text-gray-600">Feb 2024 - April 2024</p>
+                                <h4 className="text-lg font-bold">Software & AI Engineer</h4>
+                                <p className="text-gray-600">Feb 2024 - April 2024 | Intern</p>
                                 <ul className="list-disc list-inside mt-2">
                                     <li>Conduct research on AI, LLM's and machine learning algorithms</li>
                                     <li>Develop and maintain software applications</li>
@@ -49,7 +49,7 @@ export default function Experience() {
                             <AccordionContent>
                                 <h4 className="text-lg font-bold">Information Technology Help Desk Support & System
                                     Administrator</h4>
-                                <p className="text-gray-600">Jul 2021 & Aug 2022 - Summer job</p>
+                                <p className="text-gray-600">Jul 2021 & Aug 2022 | Summer job</p>
                                 <ul className="list-disc list-inside mt-2">
                                     <li>Managed helpdesk requests using a Kanban system</li>
                                     <li>Provided technical support to clients and employees</li>
@@ -67,6 +67,42 @@ export default function Experience() {
                 <div className="pt-8 pb-12">
                     <h3 className="text-xl font-bold mb-2">Technical Projects</h3>
                     <Accordion type="single" collapsible className="mt-4">
+                        <AccordionItem value="robbert">
+                            <AccordionTrigger>
+                                <p className="p-2 text-start">
+                                    RobBERT - Local NLP Model Implementation
+                                </p>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <p>This project involves the implementation of the RobBERT NLP model for local use cases on Android and other platforms. RobBERT, a Dutch language model based on the RoBERTa architecture, has been fine-tuned for the Dutch language, enabling advanced natural language processing tasks such as sentiment analysis and text classification. This project showcases examples of how to integrate RobBERT into local applications, particularly focusing on Android environments, to provide robust and efficient NLP capabilities without relying on cloud-based services.</p>
+                                <ul className="list-disc list-inside mt-2">
+                                    <li>Android Implementation: <a href="https://github.com/Chmpy/RobBERT_local_Android_example" target="_blank" className="text-violet-500 underline">RobBERT Local Android Example</a></li>
+                                    <li>Python Implementation: <a href="https://github.com/Chmpy/RobBERT_local_example" target="_blank" className="text-violet-500 underline">RobBERT Local Example</a></li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="lazypeggy">
+                            <AccordionTrigger>
+                                <p className="p-2 text-start">
+                                    Lazy Peggy - Web3 dApp
+                                </p>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <p>Lazy Peggy is a passive position management application for pegged assets on the Zircuit Layer 2 network, specifically designed for large capital holders, such as whales or users staking for points. The plugin maintains an active UniV3 position with pegged assets (e.g., Wrapped Ether.Fi ETH, Renzo ETH) effortlessly. By automating the rebalancing process, Lazy Peggy ensures optimal liquidity efficiency in the Zircuit ecosystem. The user experience is streamlined, requiring just one click to create and maintain the best passive position, with no need for manual adjustments.</p>
+                                <a href="https://web.ethglobal.com/showcase/lazy-peggy-snz2v" target="_blank" className="text-violet-500 underline">Learn more about Lazy Peggy</a>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="chess3">
+                            <AccordionTrigger>
+                                <p className="p-2 text-start">
+                                    Chess3 - Web3 dApp
+                                </p>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <p>Chess3 is an innovative Web3 dApp that reimagines the classic game of chess by integrating blockchain technology. Leveraging smart contracts, the platform introduces secure functionalities such as betting, allowing players to wager using Ethereum addresses. In addition, users can showcase their NFT collections in-game, enjoy various game modes, participate in tournaments, and bet on others' games. The project aims to blend the strategic depth of chess with the decentralized nature of Web3, creating a unique experience for both chess enthusiasts and blockchain aficionados.</p>
+                                <a href="https://devfolio.co/projects/chess-f437" target="_blank" className="text-violet-500 underline">Learn more about Chess3</a>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="loof-meals">
                             <AccordionTrigger>
                                 <p className="p-2 text-start">

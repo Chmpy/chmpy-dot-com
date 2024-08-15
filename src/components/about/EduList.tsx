@@ -29,6 +29,18 @@ export default function EduList() {
                     <h3 className="text-xl font-bold mb-2">Competition</h3>
 
                     <div className="mt-4">
+                        <h4 className="text-lg font-bold">ETHGlobal Brussels</h4>
+                        <p className="text-gray-600">Hackathon - Jul 2024</p>
+                        <p className="text-gray-600">Team size: 4</p>
+                        <p className="text-gray-600">Project:
+                            <a className="underline px-2" target="_blank"
+                               href="https://web.ethglobal.com/showcase/lazy-peggy-snz2v">Lazy Peggy</a>
+                        </p>
+                        <p>Place: 1st - Best DeFi Project on Zircuit | 1st - Best Project Building with WalletConnect's
+                            AppKit</p>
+                    </div>
+
+                    <div className="mt-4">
                         <h4 className="text-lg font-bold">ETHPrague</h4>
                         <p className="text-gray-600">Hackathon - Jun 2024</p>
                         <p className="text-gray-600">Team size: 5</p>
